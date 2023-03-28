@@ -15,4 +15,9 @@ class Tip_aranzmana extends Model
     ];
 
     protected $guarded=[];
+
+    public function aranzmani()
+    {
+        return $this->hasMany(Aranzman::class);
+    }
 }

@@ -17,4 +17,19 @@ class Aranzman extends Model
     ];
 
     protected $guarded=[];
+
+    public function tip()
+    {
+        return $this->belongsTo(Tip_aranzmana::class, 'tip_aranzmana_id');
+    }
+
+    public function mesto()
+    {
+        return $this->belongsTo(Mesto::class, 'mesto_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
