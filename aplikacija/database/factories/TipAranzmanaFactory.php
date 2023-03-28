@@ -17,7 +17,7 @@ class TipAranzmanaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'naziv_tipa_aranzmana'=> $this->faker->word()
         ];
     }
 }

@@ -17,7 +17,10 @@ class AranzmanFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'naziv'=> $this->faker->word(),
+            'tip_aranzmana_id'=> TipAranzmana::factory(),
+            'mesto_id'=> Mesto::factory(),
+            'user_id'=> User::factory(),
         ];
     }
 }

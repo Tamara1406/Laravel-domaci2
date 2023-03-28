@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::truncate();
         \App\Models\Aranzman::truncate();
-        \App\Models\Tip_aranzmana::truncate();
+        \App\Models\TipAranzmana::truncate();
         \App\Models\Mesto::truncate();
 
         $user = \App\Models\User::factory(10)->create();
@@ -37,10 +37,10 @@ class DatabaseSeeder extends Seeder
             'naziv_mesta'=>'Berlin'
         ]);
 
-        $tip1 = \App\Models\Tip_aranzmana::create([
+        $tip1 = \App\Models\TipAranzmana::create([
             'naziv_tipa_aranzmana'=>'Izlet'
         ]);
-        $tip2 = \App\Models\Tip_aranzmana::create([
+        $tip2 = \App\Models\TipAranzmana::create([
             'naziv_tipa_aranzmana'=>'Obilazak - 7 dana'
         ]);
 

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class MestoFactory extends Factory
 {
+
     /**
      * Define the model's default state.
      *
@@ -17,7 +18,7 @@ class MestoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'naziv_mesta'=> $this->faker->word()
         ];
     }
 }

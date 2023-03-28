@@ -20,7 +20,7 @@ class Aranzman extends Model
 
     public function tip()
     {
-        return $this->belongsTo(Tip_aranzmana::class, 'tip_aranzmana_id');
+        return $this->belongsTo(TipAranzmana::class, 'tip_aranzmana_id');
     }
 
     public function mesto()
