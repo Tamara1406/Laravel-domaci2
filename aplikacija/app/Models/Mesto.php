@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Mesto extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'id',
+        'naziv_mesta'
+    ];
+
+    protected $guarded=[];
 }
