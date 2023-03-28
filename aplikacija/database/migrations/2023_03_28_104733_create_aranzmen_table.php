@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('aranzmen', function (Blueprint $table) {
             $table->id();
-            $table->string('naziv');
+            $table->string('naziv')->unique();
             $table->foreignId('tip_aranzmana_id');
             $table->foreignId('mesto_id');
             $table->timestamps();

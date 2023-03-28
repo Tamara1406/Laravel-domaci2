@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tip_aranzmanas', function (Blueprint $table) {
             $table->id();
-            $table->string('naziv_tipa_aranzmana');
+            $table->string('naziv_tipa_aranzmana')->unique();
             $table->timestamps();
         });
     }

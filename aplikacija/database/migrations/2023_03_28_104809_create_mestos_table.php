@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('mestos', function (Blueprint $table) {
             $table->id();
-            $table->string('naziv_mesta');
+            $table->string('naziv_mesta')->unique();
             $table->timestamps();
         });
     }
