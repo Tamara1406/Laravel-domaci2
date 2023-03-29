@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Aranzman;
 use Illuminate\Http\Request;
 use App\Http\Resources\AranzmanResource;
+use App\Http\Resources\AranzmanCollection;
+
 
 
 class AranzmanController extends Controller
@@ -17,7 +19,7 @@ class AranzmanController extends Controller
     public function index()
     {
         $ar = Aranzman::all();
-        return $ar;
+        return new AranzmanCollection($ar);
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Mesto;
 use Illuminate\Http\Request;
+use App\Http\Resources\MestoCollection;
+
 
 class MestoController extends Controller
 {
@@ -15,7 +17,7 @@ class MestoController extends Controller
     public function index()
     {
         $mesto = Mesto::all();
-        return $mesto;
+        return new MestoCOllection($mesto);
     }
 
     /**

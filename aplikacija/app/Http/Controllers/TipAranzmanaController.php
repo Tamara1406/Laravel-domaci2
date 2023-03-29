@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\TipAranzmana;
 use Illuminate\Http\Request;
+use App\Http\Resources\TipAranzmanaCollection;
+
 
 class TipAranzmanaController extends Controller
 {
@@ -15,7 +17,7 @@ class TipAranzmanaController extends Controller
     public function index()
     {
         $tip = TipAranzmana::all();
-        return $tip;
+        return new TipAranzmanaCollection($tip);
     }
 
     /**

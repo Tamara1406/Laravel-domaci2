@@ -13,7 +13,8 @@ class Aranzman extends Model
         'id',
         'naziv',
         'tip_aranzmana_id',
-        'mesto_id'
+        'mesto_id',
+        'user_id'
     ];
 
     protected $guarded=[];
