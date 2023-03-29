@@ -6,6 +6,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AranzmanController;
 use App\Http\Controllers\TipAranzmanaController;
 use App\Http\Controllers\MestoController;
+use App\Http\Controllers\UserAranzmanController;
+use App\Http\Controllers\MestoAranzmanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/users',[UserController::class,'index']);
-Route::get('/users/{id}',[UserController::class,'show']);
+//Route::get('/users/{id}',[UserController::class,'show']);
 
 Route::get('/aranzman',[AranzmanController::class,'index']);
 //Route::get('/aranzman/{id}',[AranzmanController::class,'show']);
@@ -35,4 +38,10 @@ Route::get('/mesto',[MestoController::class,'index']);
 Route::get('/mesto/{id}',[MestoController::class,'show']);
 
 
+Route::resource('users', UserController::class);
+
 Route::resource('aranzman', AranzmanController::class);
+
+//Ugnjezdeni resursi
+Route::get('/users/{id}/ar',[UserAranzmanController::class,'index']);
+Route::get('/mesto/{id}/ar',[MestoAranzmanController::class,'index']);
